@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Our Project</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Reset some default styles */
+        body, h1, h2, p {
             margin: 0;
             padding: 0;
         }
 
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header styles */
         .header {
             background-color: #333;
             color: #fff;
@@ -18,24 +34,20 @@
             padding: 20px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
         h1 {
             font-size: 36px;
-            color: #333;
             margin-bottom: 20px;
+        }
+
+        /* Main content styles */
+        .content {
+            padding: 20px 0;
         }
 
         p {
             font-size: 18px;
             color: #555;
+            line-height: 1.5;
         }
 
         a {
@@ -47,12 +59,22 @@
             text-decoration: underline;
         }
 
+        /* About Me section styles */
         .about-me {
-            margin-top: 40px;
+            text-align: center;
+            margin-top: 30px;
         }
 
-        .about-project {
-            margin-top: 30px;
+        .about-me img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        /* Diagram placeholder styles */
+        .diagram-placeholder {
+            text-align: center;
+            margin-top: 40px;
+            /* Add your diagram here using an <img> or <object> tag */
         }
     </style>
 </head>
@@ -63,25 +85,29 @@
     </div>
     
     <div class="container">
-        <h2>About Me</h2>
-        <div class="about-me">
-            <img src="https://static.businessworld.in/article/article_extra_large_image/1608109167_bnsMKG_Nagarro_Vertical_Dark.png" alt="Parvesh's Image" style="max-width: 100%;">
-            <p>I am Parvesh, a Software Engineer at Nagarro.</p>
-        </div>
+        <div class="content">
+            <h2>About Me</h2>
+            <div class="about-me">
+                <img src="https://static.businessworld.in/article/article_extra_large_image/1608109167_bnsMKG_Nagarro_Vertical_Dark.png" alt="Parvesh's Image">
+                <p>I am Parvesh, a Software Engineer at Nagarro.</p>
+            </div>
 
-        <h2>About This Project</h2>
-        <div class="about-project">
-            <p>This project is a combination of Docker, Jenkins, and a .NET web application.</p>
-            <p><strong>Working of this project:</strong></p>
+            <h2>About This Project</h2>
+            <p>This project is a combination of Docker, Jenkins, and a .NET web application. It leverages modern technologies to build robust web applications efficiently.</p>
+            <p><strong>How it works:</strong></p>
             <ol>
-                <li>We are running Jenkins, which triggers a pipeline.</li>
-                <li>The pipeline uses Docker to build and run the .NET web application.</li>
-                <li>We use Git, and my public repository contains the source code.</li>
-                <li>On every change I make in my repository, a Jenkins pipeline is triggered.</li>
+                <li>We use Jenkins to automate our pipeline.</li>
+                <li>Docker is utilized to build and run the .NET web application.</li>
+                <li>Git repositories hold the source code, with changes triggering Jenkins pipelines.</li>
             </ol>
+            <p>Explore the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a> to get started.</p>
         </div>
 
-        <p>Get started by exploring the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a>.</p>
+        <!-- Diagram Placeholder -->
+        <div class="diagram-placeholder">
+            <!-- Add your diagram here using an <img> or <object> tag -->
+            <!-- Example: <img src="your-diagram-image.jpg" alt="Diagram"> -->
+        </div>
     </div>
 </body>
 </html>
