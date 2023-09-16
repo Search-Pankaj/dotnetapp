@@ -1,32 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Welcome to Our Project</title>
     <style>
-        /* Reset some default styles */
-        body, h1, h2, p {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
 
-        /* Global styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Header styles */
         .header {
             background-color: #333;
             color: #fff;
@@ -34,20 +18,24 @@
             padding: 20px;
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Main content styles */
-        .content {
-            padding: 20px 0;
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 18px;
             color: #555;
-            line-height: 1.5;
         }
 
         a {
@@ -58,24 +46,6 @@
         a:hover {
             text-decoration: underline;
         }
-
-        /* About Me section styles */
-        .about-me {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .about-me img {
-            max-width: 100%;
-            border-radius: 50%;
-        }
-
-        /* Diagram placeholder styles */
-        .diagram-placeholder {
-            text-align: center;
-            margin-top: 40px;
-            /* Add your diagram here using an <img> or <object> tag */
-        }
     </style>
 </head>
 <body>
@@ -85,29 +55,9 @@
     </div>
     
     <div class="container">
-        <div class="content">
-            <h2>About Me</h2>
-            <div class="about-me">
-                <img src="https://static.businessworld.in/article/article_extra_large_image/1608109167_bnsMKG_Nagarro_Vertical_Dark.png" alt="Parvesh's Image">
-                <p>I am Parvesh, a Software Engineer at Nagarro.</p>
-            </div>
-
-            <h2>About This Project</h2>
-            <p>This project is a combination of Docker, Jenkins, and a .NET web application. It leverages modern technologies to build robust web applications efficiently.</p>
-            <p><strong>How it works:</strong></p>
-            <ol>
-                <li>We use Jenkins to automate our pipeline.</li>
-                <li>Docker is utilized to build and run the .NET web application.</li>
-                <li>Git repositories hold the source code, with changes triggering Jenkins pipelines.</li>
-            </ol>
-            <p>Explore the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a> to get started.</p>
-        </div>
-
-        <!-- Diagram Placeholder -->
-        <div class="diagram-placeholder">
-            <!-- Add your diagram here using an <img> or <object> tag -->
-            <!-- Example: <img src="your-diagram-image.jpg" alt="Diagram"> -->
-        </div>
+        <h2>Explore Our Project</h2>
+        <p>This project combines the power of Jenkins, Docker, and ASP.NET Core to build modern web applications. Here, you can learn about the process and technologies behind it.</p>
+        <p>Get started by exploring the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a>.</p>
     </div>
 </body>
 </html>
