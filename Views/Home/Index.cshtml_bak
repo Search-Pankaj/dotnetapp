@@ -1,8 +1,63 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Our Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Welcome to Our Project</h1>
+        <p>Using Jenkins, Docker, and .NET for Web Applications</p>
+    </div>
+    
+    <div class="container">
+        <h2>Explore Our Project</h2>
+        <p>This project combines the power of Jenkins, Docker, and ASP.NET Core to build modern web applications. Here, you can learn about the process and technologies behind it.</p>
+        <p>Get started by exploring the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a>.</p>
+    </div>
+</body>
+</html>
