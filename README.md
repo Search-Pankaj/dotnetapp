@@ -15,5 +15,48 @@ cd dotnetwebapp
 dotnet run /or dotnet run --urls http://*:5000
 ```
 
+## Jenkins Pipeline
 
-Real World CI/CD Udemy Course [Udemy Link](https://www.udemy.com/course/cicd-pipelines-devops-jenkins-python-docker/?referralCode=AC03DFF9ABBABBEAB333).
+pipeline {
+    agent any
+
+    environment {
+        registry = "kss7/dothecks"
+        img = "${registry}:${env.BUILD_ID}"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Search-Pankaj/dotnetapp.git'
+            }
+        }
+stage('Stop running Container') {
+    steps {
+        script {
+            sh returnStatus: true, script: 'docker stop $(docker ps -a | grep ${JOB_NAME} | awk "{print \$3}")' 
+            sh returnStatus: true, script: 'docker rmi $(docker images | grep ${registry} | awk "{print \$3}") --force'
+            sh returnStatus: true, script: 'docker rm ${JOB_NAME}'
+           
+        }
+    }
+}        
+        stage('Build') {
+            steps {
+                echo "Building our image"
+                script {
+                    docker.build("${img}")
+                }
+            }
+        }
+        stage('Run') {
+            steps {
+                echo "Run image"
+                script {
+                    sh returnStdout: true, script: "docker run --rm -d --name ${JOB_NAME} -p 8081:5000 ${img}"
+                }
+            }
+        }
+    }
+}
+
