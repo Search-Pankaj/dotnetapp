@@ -1,7 +1,3 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,6 +46,14 @@
         a:hover {
             text-decoration: underline;
         }
+
+        .about-me {
+            margin-top: 40px;
+        }
+
+        .about-project {
+            margin-top: 30px;
+        }
     </style>
 </head>
 <body>
@@ -59,8 +63,24 @@
     </div>
     
     <div class="container">
-        <h2>Explore Our Project</h2>
-        <p>This project combines the power of Jenkins, Docker, and ASP.NET Core to build modern web applications. Here, you can learn about the process and technologies behind it.</p>
+        <h2>About Me</h2>
+        <div class="about-me">
+            <img src="https://static.businessworld.in/article/article_extra_large_image/1608109167_bnsMKG_Nagarro_Vertical_Dark.png" alt="Parvesh's Image" style="max-width: 100%;">
+            <p>I am Parvesh, a Software Engineer at Nagarro.</p>
+        </div>
+
+        <h2>About This Project</h2>
+        <div class="about-project">
+            <p>This project is a combination of Docker, Jenkins, and a .NET web application.</p>
+            <p><strong>Working of this project:</strong></p>
+            <ol>
+                <li>We are running Jenkins, which triggers a pipeline.</li>
+                <li>The pipeline uses Docker to build and run the .NET web application.</li>
+                <li>We use Git, and my public repository contains the source code.</li>
+                <li>On every change I make in my repository, a Jenkins pipeline is triggered.</li>
+            </ol>
+        </div>
+
         <p>Get started by exploring the documentation on <a href="https://docs.microsoft.com/aspnet/core" target="_blank">building Web apps with ASP.NET Core</a>.</p>
     </div>
 </body>
